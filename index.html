@@ -15,7 +15,15 @@
         .services { margin-top: 20px; }
         .services ul { list-style-type: none; padding: 0; }
         .services li { background: #eee; margin-bottom: 5px; padding: 10px; border-radius: 4px; text-shadow: 1px 1px #fff; }
-        logo { animation: rotate 3s linear infinite; } @keyframes rotate { 0% { transform: rotateY(0deg); } 100% { transform: rotateY(360deg); } }
+        .logo {
+  animation: rotate 3s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
         .services li:first-child { color: #d9534f; }
     </style>
     <!-- Google tag (gtag.js) -->

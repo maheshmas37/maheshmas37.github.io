@@ -24,11 +24,6 @@
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(360deg); }
 }
-        .rolling-heading {
-  animation: rollX 5s infinite linear;
-  transform-style: preserve-3d;
-}
-
 @keyframes rollX {
   0% { transform: rotateX(0deg); }
   100% { transform: rotateX(360deg); }
@@ -48,7 +43,14 @@
         <div style="text-align: center;">
             <img src="Logo Design.jpg" alt="MC TECH Logo" class="logo" style="max-width: 150px; border-radius: 50%;">
         </div>
-        <h1 style="color: red;">Welcome to MC TECH Laptop Solutions!</h1>
+        <h1 .rolling-heading {
+  animation: rollX 5s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes rollX {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(360deg); } style="color: red;">Welcome to MC TECH Laptop Solutions!</h1>
         <p style="color: blue;">Your trusted partner for all laptop hardware repair and software troubleshooting needs.</p>
 
         <div class="services">

@@ -7,12 +7,11 @@
 
   <title>MC TECH Laptop Solutions | Laptop Service in New Thippasandra, Bengaluru</title>
 
-  <meta name="description" content="MC TECH Laptop Solutions in New Thippasandra, Bengaluru. Explore laptop servicing, computer support, Windows installation, laptop upgrades and other available services.">
+  <meta name="description" content="MC TECH Laptop Solutions, New Thippasandra, Bengaluru. Contact us for laptop servicing, Windows installation, RAM and SSD upgrades, software installation and computer support.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#071426">
 
-  <!-- Keep your existing Google Search Console verification
-       tag here if you already have one. Do not invent a token. -->
+  <!-- Keep your existing Google Search Console verification tag here. -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +20,12 @@
   <style>
     :root {
       --bg: #071426;
-      --panel: #0e2038;
+      --panel: #10243d;
       --text: #f5f8ff;
-      --muted: #b8c6d9;
+      --muted: #c0ccdc;
       --blue: #37b6ff;
       --orange: #ff9f43;
-      --line: rgba(255,255,255,.12);
+      --line: rgba(255,255,255,.13);
     }
 
     * {
@@ -42,8 +41,8 @@
 
     body {
       font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
       color: var(--text);
+      background: var(--bg);
       line-height: 1.7;
     }
 
@@ -60,24 +59,25 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(7,20,38,.95);
+      z-index: 100;
+      background: rgba(7,20,38,.96);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(12px);
     }
 
     .navbar {
-      min-height: 76px;
+      min-height: 75px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
     }
 
     .brand {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 900;
-      letter-spacing: .5px;
+      white-space: nowrap;
     }
 
     .brand span {
@@ -86,8 +86,7 @@
 
     nav {
       display: flex;
-      gap: 20px;
-      align-items: center;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
@@ -96,36 +95,37 @@
       font-size: .9rem;
     }
 
-    nav a:hover {
+    nav a:hover,
+    .social-links a:hover {
       color: var(--blue);
     }
 
     .hero {
-      padding: 90px 0 75px;
-      overflow: hidden;
+      padding: 85px 0;
       background:
-        radial-gradient(ellipse at 80% 25%, rgba(55,182,255,.16), transparent 42%),
-        radial-gradient(ellipse at 10% 90%, rgba(255,159,67,.10), transparent 40%);
+        radial-gradient(ellipse at 80% 25%, rgba(55,182,255,.17), transparent 42%),
+        radial-gradient(ellipse at 10% 90%, rgba(255,159,67,.12), transparent 40%);
+      overflow: hidden;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.1fr .9fr;
       align-items: center;
-      gap: 48px;
+      gap: 45px;
     }
 
     .eyebrow {
       color: var(--orange);
-      font-weight: 800;
       text-transform: uppercase;
+      font-size: .85rem;
+      font-weight: 800;
       letter-spacing: 2px;
-      font-size: .8rem;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1.12;
+      font-size: clamp(2.3rem, 5vw, 4.3rem);
+      line-height: 1.13;
       margin: 18px 0;
       letter-spacing: -1.5px;
     }
@@ -134,22 +134,23 @@
       color: var(--blue);
     }
 
-    .hero p, .section-intro {
+    .hero p,
+    .section-intro {
       color: var(--muted);
-      max-width: 680px;
+      max-width: 700px;
     }
 
     .actions {
       display: flex;
-      gap: 14px;
+      gap: 13px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 26px;
     }
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       padding: 12px 20px;
       border-radius: 10px;
       font-weight: 800;
@@ -158,12 +159,12 @@
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      box-shadow: 0 10px 25px rgba(0,0,0,.3);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), #1685df);
       color: #061425;
+      background: linear-gradient(135deg, var(--blue), #1685df);
     }
 
     .btn-secondary {
@@ -172,17 +173,17 @@
     }
 
     .laptop-stage {
-      min-height: 300px;
       display: grid;
       place-items: center;
+      min-height: 310px;
       perspective: 900px;
     }
 
     .laptop {
       width: min(360px, 100%);
-      transform: rotateY(-13deg) rotateX(5deg);
       animation: float 4s ease-in-out infinite;
-      filter: drop-shadow(0 25px 25px rgba(0,0,0,.35));
+      transform: rotateY(-12deg) rotateX(4deg);
+      filter: drop-shadow(0 25px 25px rgba(0,0,0,.4));
     }
 
     .screen {
@@ -194,17 +195,16 @@
       display: grid;
       place-items: center;
       text-align: center;
-      padding: 18px;
+      padding: 15px;
     }
 
     .screen strong {
-      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-size: 2rem;
       text-shadow: 0 4px 14px #001;
     }
 
     .screen small {
       display: block;
-      color: #fff;
       letter-spacing: 2px;
     }
 
@@ -217,8 +217,12 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotateY(-13deg) rotateX(5deg); }
-      50% { transform: translateY(-12px) rotateY(-8deg) rotateX(3deg); }
+      0%, 100% {
+        transform: translateY(0) rotateY(-12deg) rotateX(4deg);
+      }
+      50% {
+        transform: translateY(-12px) rotateY(-7deg) rotateX(3deg);
+      }
     }
 
     section {
@@ -226,7 +230,7 @@
     }
 
     .section-heading {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
       line-height: 1.2;
       margin-bottom: 14px;
     }
@@ -245,28 +249,28 @@
       padding: 25px;
       border: 1px solid var(--line);
       border-radius: 16px;
-      background: linear-gradient(145deg, #112945, #0a192d);
+      background: linear-gradient(145deg, #122a47, #0a192d);
       transition: transform .25s, border-color .25s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
       border-color: var(--blue);
     }
 
-    .card .symbol {
-      font-size: 1.9rem;
+    .symbol {
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
     .card h3 {
-      font-size: 1.12rem;
       margin-bottom: 8px;
+      font-size: 1.12rem;
     }
 
     .card p {
       color: var(--muted);
-      font-size: .94rem;
+      font-size: .95rem;
     }
 
     .about {
@@ -284,12 +288,12 @@
 
     .check-list {
       list-style: none;
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .check-list li {
-      margin: 10px 0;
       color: var(--muted);
+      margin: 10px 0;
     }
 
     .check-list li::before {
@@ -300,14 +304,14 @@
     }
 
     .contact-box {
+      padding: 28px;
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 18px;
-      padding: 28px;
     }
 
     .contact-box p {
-      margin: 12px 0;
+      margin: 14px 0;
       color: var(--muted);
       overflow-wrap: anywhere;
     }
@@ -316,47 +320,67 @@
       color: var(--text);
     }
 
-    .contact-box .actions {
-      margin-top: 20px;
-    }
-
     .faq-item {
       padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .faq-item h3 {
-      font-size: 1.05rem;
       margin-bottom: 7px;
+      font-size: 1.05rem;
     }
 
     .faq-item p {
       color: var(--muted);
     }
 
-    footer {
-      padding: 28px 0;
+    .social-section {
+      padding: 35px 0;
+      text-align: center;
+      background: #0a1a2e;
       border-top: 1px solid var(--line);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
       color: var(--muted);
       font-size: .9rem;
-      text-align: center;
+      border-top: 1px solid var(--line);
     }
 
     .whatsapp {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 30;
+      z-index: 200;
       border-radius: 50px;
-      background: #20b86a;
-      color: #061b10;
+      background: #25d366;
+      color: #062014;
       padding: 12px 17px;
       font-weight: 900;
       box-shadow: 0 8px 25px rgba(0,0,0,.35);
     }
 
     @media (max-width: 800px) {
-      .hero-grid, .about-grid {
+      .hero-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
@@ -364,16 +388,11 @@
         padding: 60px 0;
       }
 
-      .laptop-stage {
-        min-height: 230px;
-      }
-
       .cards {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .navbar {
-        padding: 15px 0;
         align-items: flex-start;
         flex-direction: column;
       }
@@ -388,26 +407,27 @@
         grid-template-columns: 1fr;
       }
 
-      nav a {
-        font-size: .82rem;
+      section {
+        padding: 50px 0;
       }
 
-      section {
-        padding: 52px 0;
+      .laptop-stage {
+        min-height: 230px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
+      *,
+      *::before,
+      *::after {
         animation: none !important;
+        scroll-behavior: auto !important;
         transition: none !important;
       }
     }
   </style>
 
-  <!-- Local business structured data: keep all details accurate.
-       Add the actual website URL after you confirm your GitHub Pages URL. -->
+  <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -433,9 +453,7 @@
 <body>
   <header>
     <div class="container navbar">
-      <a class="brand" href="#home" aria-label="MC TECH home">
-        MC <span>TECH</span>
-      </a>
+      <a class="brand" href="#home">MC <span>TECH</span></a>
 
       <nav aria-label="Main navigation">
         <a href="#home">Home</a>
@@ -460,14 +478,14 @@
           <p>
             Looking for laptop servicing and computer support in
             New Thippasandra, Bengaluru? Contact MC TECH Laptop
-            Solutions to enquire about available services, upgrades
-            and computer assistance.
+            Solutions to enquire about available services and upgrades.
           </p>
 
           <div class="actions">
             <a class="btn btn-primary" href="tel:+919542153367">
               Call Our Shop
             </a>
+
             <a class="btn btn-secondary"
                href="https://www.google.com/maps/search/?api=1&amp;query=MC+TECH+Laptop+Solutions+No+2+7th+Main+HAL+3rd+Stage+New+Thippasandra+Bengaluru+560075"
                target="_blank" rel="noopener noreferrer">
@@ -476,7 +494,7 @@
           </div>
         </div>
 
-        <div class="laptop-stage" aria-label="Animated laptop illustration">
+        <div class="laptop-stage" aria-label="Laptop illustration">
           <div class="laptop">
             <div class="screen">
               <div>
@@ -493,8 +511,9 @@
     <section id="services">
       <div class="container">
         <h2 class="section-heading">Laptop & Computer Services</h2>
+
         <p class="section-intro">
-          Explore our service options in New Thippasandra, Bengaluru.
+          Explore our available services in New Thippasandra, Bengaluru.
           Contact us to confirm availability and pricing.
         </p>
 
@@ -502,37 +521,37 @@
           <article class="card">
             <div class="symbol" aria-hidden="true">💻</div>
             <h3>Laptop Servicing</h3>
-            <p>Enquire about laptop inspection, maintenance and servicing options.</p>
+            <p>Enquire about laptop inspection and servicing options.</p>
           </article>
 
           <article class="card">
             <div class="symbol" aria-hidden="true">⚙️</div>
             <h3>RAM & SSD Upgrade</h3>
-            <p>Ask about compatible memory and storage upgrades for your laptop.</p>
+            <p>Ask about compatible memory and storage upgrades.</p>
           </article>
 
           <article class="card">
             <div class="symbol" aria-hidden="true">🖥️</div>
             <h3>Windows Installation</h3>
-            <p>Enquire about Windows installation and operating system support.</p>
+            <p>Enquire about operating system installation and support.</p>
           </article>
 
           <article class="card">
             <div class="symbol" aria-hidden="true">🛠️</div>
             <h3>Computer Support</h3>
-            <p>Get information about available computer troubleshooting services.</p>
+            <p>Ask about computer troubleshooting and support services.</p>
           </article>
 
           <article class="card">
             <div class="symbol" aria-hidden="true">📦</div>
             <h3>Software Installation</h3>
-            <p>Ask about installing compatible software and setting up your system.</p>
+            <p>Enquire about compatible software installation.</p>
           </article>
 
           <article class="card">
             <div class="symbol" aria-hidden="true">💼</div>
             <h3>Laptop Sales</h3>
-            <p>Contact us to enquire about laptop availability and sales options.</p>
+            <p>Contact us to check laptop availability and sales options.</p>
           </article>
         </div>
       </div>
@@ -542,17 +561,17 @@
       <div class="container about-grid">
         <div>
           <h2 class="section-heading">About MC TECH</h2>
+
           <p class="section-intro">
-            MC TECH Laptop Solutions serves customers from
-            New Thippasandra, Bengaluru. Contact our shop to discuss
-            your laptop or computer requirements and confirm the
-            services available for your device.
+            MC TECH Laptop Solutions is located in New Thippasandra,
+            Bengaluru. Contact our shop to discuss your laptop or
+            computer requirements and confirm available services.
           </p>
 
           <ul class="check-list">
-            <li>Convenient local shop location</li>
-            <li>Service options explained before proceeding</li>
+            <li>Local shop in New Thippasandra</li>
             <li>Enquiries by phone</li>
+            <li>Service availability confirmed before proceeding</li>
           </ul>
         </div>
 
@@ -560,7 +579,7 @@
           <h2 class="section-heading">Contact Our Shop</h2>
 
           <p>
-            <strong>Business:</strong><br>
+            <strong>Business Name:</strong><br>
             MC TECH Laptop Solutions
           </p>
 
@@ -595,20 +614,46 @@
         <h2 class="section-heading">Frequently Asked Questions</h2>
 
         <div class="faq-item">
-          <h3>Where is MC TECH Laptop Solutions located?</h3>
-          <p>We are listed at No. 2, 7th Main, HAL 3rd Stage,
+          <h3>Where is MC TECH Laptop Solutions?</h3>
+          <p>Our address is No. 2, 7th Main, HAL 3rd Stage,
           New Thippasandra, Bengaluru - 560075.</p>
         </div>
 
         <div class="faq-item">
           <h3>How can I enquire about laptop servicing?</h3>
-          <p>Call 95421 53367 to ask about available services and pricing.</p>
+          <p>Call 95421 53367 to enquire about available services.</p>
         </div>
 
         <div class="faq-item">
           <h3>Do you offer laptop upgrades?</h3>
-          <p>Contact us to check upgrade availability and compatibility
-          for your laptop model.</p>
+          <p>Contact us to check upgrade availability and compatibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section" id="social">
+      <div class="container">
+        <h2 class="section-heading">Connect With MC TECH</h2>
+        <p class="section-intro" style="margin: 0 auto;">
+          Contact our shop or visit our official social media pages.
+        </p>
+
+        <div class="social-links">
+          <!-- Replace these placeholders with your real profile URLs. -->
+          <a href="YOUR_FACEBOOK_PAGE_URL"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
+
+          <a href="https://www.instagram.com/mctech1991?vrfl=MTlqaWRzdTV0Znpubw=="
+             target="_blank" rel="noopener noreferrer">Instagram</a>
+
+          <a href="https://x.com/MCTECHLaptop"
+             target="_blank" rel="noopener noreferrer">X / Twitter</a>
+
+          <a href="https://wa.me/919542153367"
+             target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+          <a href="https://www.facebook.com/share/1ERSch6Rdg/"
+             target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
     </section>
@@ -616,7 +661,10 @@
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> MC TECH Laptop Solutions. All rights reserved.</p>
+      <p>
+        © <span id="year"></span>
+        MC TECH Laptop Solutions. All rights reserved.
+      </p>
       <p>New Thippasandra, Bengaluru, Karnataka - 560075</p>
     </div>
   </footer>

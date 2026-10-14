@@ -1,1 +1,471 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Software installation and troubleshooting services at MC TECH Laptop Solutions, New Thippasandra, Bengaluru.">
+  <title>Software Installation | MC TECH Laptop Solutions</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #07111f;
+      --panel: #101f33;
+      --blue: #18a8ff;
+      --orange: #ff8b24;
+      --white: #ffffff;
+      --muted: #b8c7d9;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #20354d;
+      background: #091626;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    .nav a {
+      color: #dce9f8;
+      font-size: 14px;
+    }
+
+    .back {
+      border: 1px solid var(--blue);
+      border-radius: 8px;
+      padding: 8px 13px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding: 65px 0;
+      min-height: 480px;
+    }
+
+    .tag {
+      color: var(--orange);
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    .hero p,
+    .section-intro {
+      color: var(--muted);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .primary {
+      color: #06111e;
+      background: var(--orange);
+    }
+
+    .secondary {
+      border: 1px solid var(--blue);
+      color: var(--white);
+    }
+
+    /* CSS 3D laptop */
+    .visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 290px;
+      perspective: 900px;
+      overflow: hidden;
+    }
+
+    .laptop {
+      width: min(340px, 85%);
+      position: relative;
+      transform: rotateY(-16deg) rotateX(5deg);
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 15px 25px #008cff30);
+    }
+
+    .screen {
+      height: 205px;
+      background: linear-gradient(145deg, #173b60, #06101c);
+      border: 7px solid #8295aa;
+      border-bottom: 12px solid #52677d;
+      border-radius: 12px 12px 5px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 25px #168bff30;
+    }
+
+    .screen-content {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .screen-content .gear {
+      font-size: 57px;
+      color: var(--blue);
+      text-shadow: 0 0 20px #18a8ff;
+    }
+
+    .screen-content strong {
+      display: block;
+      color: var(--orange);
+      font-size: 17px;
+    }
+
+    .screen-content small {
+      color: #d4e8ff;
+    }
+
+    .base {
+      height: 15px;
+      width: 112%;
+      margin-left: -6%;
+      background: linear-gradient(#d4e0ec, #53687c 60%, #25394e);
+      border-radius: 2px 2px 15px 15px;
+      transform: perspective(120px) rotateX(15deg);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotateY(-16deg) rotateX(5deg);
+      }
+      50% {
+        transform: translateY(-12px) rotateY(-10deg) rotateX(5deg);
+      }
+    }
+
+    section {
+      padding: 45px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #11243a, #0b1727);
+      border: 1px solid #243c56;
+      padding: 23px;
+      border-radius: 14px;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 18px;
+      border-left: 4px solid var(--orange);
+      background: #102036;
+      border-radius: 7px;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, #102b46, #101a2b);
+      border: 1px solid #244c6c;
+      border-radius: 16px;
+      padding: 32px 20px;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      border-top: 1px solid #20354d;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+        gap: 15px;
+      }
+
+      .visual {
+        min-height: 250px;
+      }
+
+      .screen {
+        height: 175px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .laptop {
+        animation: none;
+      }
+
+      .card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="../index.html">
+        MC TECH <span>Laptop Solutions</span>
+      </a>
+      <a class="back" href="../index.html#services">
+        ← All Services
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div>
+        <div class="tag">MC TECH LAPTOP SOLUTIONS</div>
+        <h1>Professional <span>Software Installation</span></h1>
+        <p>
+          Need help installing software on your laptop or desktop?
+          Contact MC TECH Laptop Solutions for software setup,
+          installation assistance and troubleshooting in Bengaluru.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="tel:+919542153367">
+            Call for Service
+          </a>
+          <a class="btn secondary"
+             href="https://wa.me/919542153367?text=Hello%20MC%20TECH%2C%20I%20need%20software%20installation%20service."
+             target="_blank" rel="noopener noreferrer">
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <div class="visual" aria-label="Animated 3D laptop illustration">
+        <div class="laptop">
+          <div class="screen">
+            <div class="screen-content">
+              <div class="gear" aria-hidden="true">⚙</div>
+              <strong>SOFTWARE SETUP</strong>
+              <small>Installation & Support</small>
+            </div>
+          </div>
+          <div class="base"></div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Our Software Services</h2>
+        <p class="section-intro">
+          Contact us to discuss software installation and setup
+          based on your device and requirements.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🪟</div>
+            <h3>Windows Setup</h3>
+            <p>Assistance with Windows installation, setup and activation options using a valid licence.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📦</div>
+            <h3>Application Installation</h3>
+            <p>Installation assistance for compatible applications from trusted sources.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <h3>Antivirus Setup</h3>
+            <p>Antivirus installation and security software setup assistance.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔧</div>
+            <h3>Driver Installation</h3>
+            <p>Help installing compatible laptop drivers and resolving driver issues.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🐞</div>
+            <h3>Software Troubleshooting</h3>
+            <p>Help investigating software errors, crashes and installation problems.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">💾</div>
+            <h3>Backup & Setup</h3>
+            <p>Assistance with data backup and software setup. Data recovery is subject to assessment.</p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Important:</strong> Software availability, compatibility,
+          licence requirements and service charges depend on the specific
+          software and device. Please contact us for a quotation.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-box">
+          <h2>Need Software Installation?</h2>
+          <p><strong>MC TECH Laptop Solutions</strong></p>
+          <p>No. 2, 7th Main, HAL 3rd Stage, New Thippasandra, Bengaluru - 560075</p>
+          <p>Phone: 95421 53367</p>
+
+          <div class="buttons" style="justify-content:center">
+            <a class="btn primary" href="tel:+919542153367">
+              Call Now
+            </a>
+            <a class="btn secondary"
+               href="https://wa.me/919542153367"
+               target="_blank" rel="noopener noreferrer">
+              Chat on WhatsApp
+            </a>
+            <a class="btn secondary" href="../index.html">
+              Visit Homepage
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year">2026</span> MC TECH Laptop Solutions. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+```

@@ -1,1 +1,362 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Laptop sales at MC TECH Laptop Solutions, New Thippasandra, Bengaluru. Contact us for laptop availability and quotations.">
+  <title>Laptop Sales | MC TECH Laptop Solutions</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07111f;
+      --panel: #102138;
+      --blue: #18a8ff;
+      --orange: #ff8b24;
+      --white: #fff;
+      --muted: #b8c7d9;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: #091626;
+      border-bottom: 1px solid #20354d;
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo { font-size: 22px; font-weight: 800; }
+    .logo span { color: var(--orange); }
+
+    .back {
+      border: 1px solid var(--blue);
+      border-radius: 8px;
+      padding: 7px 13px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 35px;
+      padding: 65px 0;
+    }
+
+    .tag {
+      color: var(--orange);
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 5vw, 54px);
+      line-height: 1.15;
+      margin: 14px 0;
+    }
+
+    h1 span { color: var(--blue); }
+    p { color: var(--muted); }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 17px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .primary { background: var(--orange); color: #07111f; }
+    .secondary { border: 1px solid var(--blue); }
+
+    /* 3D laptop illustration */
+    .visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+      perspective: 900px;
+      overflow: hidden;
+    }
+
+    .laptop {
+      width: min(340px, 85%);
+      transform: rotateY(-16deg) rotateX(5deg);
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 15px 25px #008cff30);
+    }
+
+    .screen {
+      height: 210px;
+      border: 7px solid #8295aa;
+      border-bottom: 12px solid #536a80;
+      border-radius: 12px 12px 5px 5px;
+      background: linear-gradient(145deg, #17466e, #07111f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 25px #18a8ff35;
+    }
+
+    .screen-content { text-align: center; padding: 10px; }
+    .screen-content .emoji { font-size: 55px; }
+    .screen-content strong {
+      display: block;
+      color: var(--orange);
+      font-size: 19px;
+    }
+
+    .base {
+      height: 15px;
+      width: 112%;
+      margin-left: -6%;
+      background: linear-gradient(#dce7f2, #61768b 60%, #263a50);
+      border-radius: 2px 2px 15px 15px;
+      transform: perspective(120px) rotateX(15deg);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotateY(-16deg) rotateX(5deg); }
+      50% { transform: translateY(-12px) rotateY(-10deg) rotateX(5deg); }
+    }
+
+    section { padding: 42px 0; }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #11243a, #0b1727);
+      border: 1px solid #243c56;
+      border-radius: 14px;
+      padding: 23px;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
+    }
+
+    .card .icon { font-size: 34px; }
+    .card h3 { color: var(--blue); margin: 8px 0; }
+    .card p { font-size: 14px; }
+
+    .notice {
+      background: #102036;
+      border-left: 4px solid var(--orange);
+      padding: 17px;
+      border-radius: 7px;
+      margin-top: 25px;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, #102b46, #101a2b);
+      border: 1px solid #244c6c;
+      border-radius: 16px;
+      padding: 30px 20px;
+    }
+
+    .contact-box h2 { margin-bottom: 12px; }
+    .contact-box p { margin-bottom: 8px; }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      color: var(--muted);
+      border-top: 1px solid #20354d;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 40px 0; }
+      .visual { min-height: 260px; }
+      .screen { height: 180px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .cards { grid-template-columns: 1fr; }
+      .logo { font-size: 19px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .laptop { animation: none; }
+      .card { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a href="../index.html" class="logo">
+        MC TECH <span>Laptop Solutions</span>
+      </a>
+      <a href="../index.html#services" class="back">← All Services</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div>
+        <div class="tag">MC TECH LAPTOP SOLUTIONS</div>
+        <h1>Laptop <span>Sales</span> in Bengaluru</h1>
+        <p>
+          Looking for a laptop for work, study or everyday use?
+          Contact MC TECH Laptop Solutions to enquire about available
+          laptops, specifications, pricing and suitable options.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="tel:+919542153367">Call for Price</a>
+          <a class="btn secondary"
+             href="https://wa.me/919542153367?text=Hello%20MC%20TECH%2C%20I%20want%20to%20enquire%20about%20laptop%20sales."
+             target="_blank" rel="noopener noreferrer">WhatsApp Enquiry</a>
+        </div>
+      </div>
+
+      <div class="visual" aria-label="Animated 3D laptop illustration">
+        <div class="laptop">
+          <div class="screen">
+            <div class="screen-content">
+              <div class="emoji" aria-hidden="true">💻</div>
+              <strong>LAPTOP SALES</strong>
+              <p>Find Your Next Laptop</p>
+            </div>
+          </div>
+          <div class="base"></div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Explore Laptop Options</h2>
+        <p class="intro">
+          Tell us your budget and requirements. We can discuss availability
+          and help you compare suitable options.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">💼</div>
+            <h3>Business Laptops</h3>
+            <p>Enquire about laptops for office work, business applications and productivity.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🎓</div>
+            <h3>Student Laptops</h3>
+            <p>Explore suitable options for online classes, assignments and everyday study.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">⚡</div>
+            <h3>Performance Laptops</h3>
+            <p>Ask about configurations suitable for demanding applications and multitasking.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🖥️</div>
+            <h3>Desktop Computers</h3>
+            <p>Contact us to enquire about desktop computer availability and configuration options.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔧</div>
+            <h3>Upgrade Advice</h3>
+            <p>Ask whether RAM or SSD upgrades could suit your existing laptop.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛠️</div>
+            <h3>After-Sales Service</h3>
+            <p>Contact us to enquire about laptop servicing and technical support.</p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Availability and pricing:</strong>
+          Laptop models, specifications, warranty and prices depend on current stock.
+          Contact us for the latest details before visiting.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact-box">
+          <h2>Enquire About Laptop Availability</h2>
+          <p><strong>MC TECH Laptop Solutions</strong></p>
+          <p>No. 2, 7th Main, HAL 3rd Stage, New Thippasandra, Bengaluru - 560075</p>
+          <p>Phone: 95421 53367</p>
+
+          <div class="buttons" style="justify-content:center">
+            <a class="btn primary" href="tel:+919542153367">Call Now</a>
+            <a class="btn secondary"
+               href="https://wa.me/919542153367"
+               target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            <a class="btn secondary" href="../index.html">Homepage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year">2026</span> MC TECH Laptop Solutions. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+```
 

@@ -3,24 +3,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Laptop Motherboard Repair in Bengaluru | MC TECH</title>
-
-  <meta name="description" content="MC TECH Laptop Solutions provides laptop motherboard repair enquiries, laptop power issue diagnosis and computer service in New Thippasandra, Bengaluru.">
+  <title>Laptop Motherboard Repair Bengaluru | MC TECH</title>
+  <meta name="description" content="MC TECH Laptop Solutions offers motherboard repair enquiries, laptop power issue diagnosis and hardware troubleshooting in New Thippasandra, Bengaluru.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#071426">
-
   <link rel="canonical" href="https://maheshmas37.github.io/services/motherboard-repair.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #071426;
       --panel: #10243d;
-      --text: #f5f8ff;
-      --muted: #c0ccdc;
+      --panel2: #0b1b2f;
       --blue: #37b6ff;
       --orange: #ff9f43;
+      --white: #f5f8ff;
+      --muted: #becbdd;
       --line: rgba(255,255,255,.13);
     }
 
@@ -32,17 +35,25 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Inter, Arial, sans-serif;
       background: var(--bg);
-      color: var(--text);
+      color: var(--white);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
+      color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -56,23 +67,21 @@
       z-index: 100;
       background: rgba(7,20,38,.96);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
     }
 
     .navbar {
-      min-height: 75px;
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
-      flex-wrap: wrap;
-      padding: 14px 0;
     }
 
     .brand {
-      font-size: 21px;
+      font-size: 1.3rem;
       font-weight: 900;
-      color: white;
+      white-space: nowrap;
     }
 
     .brand span {
@@ -81,60 +90,58 @@
 
     nav {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 22px;
     }
 
     nav a {
       color: var(--muted);
-      font-size: 14px;
+      font-size: .9rem;
     }
 
     nav a:hover {
       color: var(--blue);
     }
 
-    /* HERO SECTION */
-
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 75px 0;
+      padding: 65px 0 75px;
       background:
-        radial-gradient(ellipse at 80% 40%, rgba(0,145,255,.20), transparent 45%),
-        radial-gradient(ellipse at 10% 90%, rgba(255,159,67,.10), transparent 40%),
-        #071426;
+        radial-gradient(ellipse at 85% 20%, rgba(55,182,255,.13), transparent 42%),
+        radial-gradient(ellipse at 5% 90%, rgba(255,159,67,.10), transparent 38%);
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 35px;
+      gap: 45px;
     }
 
     .eyebrow {
+      display: inline-block;
       color: var(--orange);
-      font-size: 13px;
+      text-transform: uppercase;
       font-weight: 800;
       letter-spacing: 2px;
+      font-size: .8rem;
     }
 
     h1 {
-      font-size: clamp(36px, 5vw, 60px);
-      line-height: 1.12;
-      margin: 20px 0;
-      letter-spacing: -1.5px;
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      letter-spacing: -1.7px;
+      margin: 18px 0;
     }
 
     h1 span {
+      display: block;
       color: var(--blue);
     }
 
-    .hero-description {
+    .hero-copy {
       color: var(--muted);
-      max-width: 550px;
-      font-size: 16px;
+      font-size: 1rem;
+      max-width: 540px;
     }
 
     .actions {
@@ -146,285 +153,187 @@
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      padding: 12px 19px;
+      align-items: center;
+      padding: 12px 18px;
       border-radius: 9px;
-      font-size: 14px;
+      font-size: .9rem;
       font-weight: 800;
-      transition: transform .2s, box-shadow .2s;
+      transition: .2s ease;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,.3);
+      box-shadow: 0 9px 22px rgba(0,0,0,.3);
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #53c8ff, #1685df);
+    .primary {
+      background: linear-gradient(135deg, #56c7ff, #1685df);
       color: #061425;
     }
 
-    .btn-secondary {
-      color: white;
-      border: 1px solid #49627d;
+    .orange {
+      background: linear-gradient(135deg, #ffc27e, #ff902b);
+      color: #241303;
+    }
+
+    .outline {
+      border: 1px solid var(--line);
       background: rgba(255,255,255,.04);
     }
 
-    /* CSS 3D MOTHERBOARD */
-
-    .board-scene {
+    .hero-photo {
       position: relative;
-      min-height: 390px;
-      display: grid;
-      place-items: center;
-      perspective: 1000px;
-      isolation: isolate;
-    }
-
-    .board-glow {
-      position: absolute;
-      width: 80%;
-      height: 55%;
-      background: #008cff;
-      filter: blur(70px);
-      opacity: .22;
-      z-index: -1;
-    }
-
-    .motherboard {
-      position: relative;
-      width: min(390px, 90%);
-      aspect-ratio: 1.15;
-      border: 2px solid #3a9fcb;
-      border-radius: 18px;
+      min-height: 370px;
+      border: 1px solid rgba(55,182,255,.35);
+      border-radius: 20px;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 12% 20%, #43caff 0 2px, transparent 3px),
-        radial-gradient(circle at 85% 72%, #43caff 0 2px, transparent 3px),
-        repeating-linear-gradient(90deg, transparent 0 24px, #155272 25px 27px, transparent 28px 48px),
-        repeating-linear-gradient(0deg, #092d35 0 20px, #104b4d 21px 23px, #092d35 24px 40px);
-      box-shadow:
-        0 0 20px rgba(0,174,255,.6),
-        0 0 55px rgba(0,119,255,.25),
-        inset 0 0 40px rgba(0,180,255,.2);
-      transform: rotateX(53deg) rotateZ(-28deg);
-      animation: boardFloat 5s ease-in-out infinite;
+      background: #0b1b2d;
+      box-shadow: 0 25px 60px rgba(0,0,0,.35);
     }
 
-    .board-inner-border {
-      position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(91,220,255,.4);
-      border-radius: 10px;
+    .hero-photo img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: saturate(.9) contrast(1.08);
     }
 
-    .chip {
+    .photo-overlay {
       position: absolute;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      background: linear-gradient(145deg, #304c63, #060d17);
-      border: 2px solid #55cfff;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 35%,
+        rgba(3,12,23,.3) 55%,
+        rgba(3,12,23,.96) 100%
+      );
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    .photo-caption span {
+      color: #d3deeb;
+      font-size: .88rem;
+    }
+
+    .photo-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      padding: 8px 12px;
       border-radius: 7px;
-      box-shadow: 0 0 15px rgba(0,159,255,.65), inset 0 0 10px #1688bc;
+      background: rgba(7,20,38,.9);
+      border: 1px solid rgba(55,182,255,.4);
+      color: var(--blue);
+      font-size: .75rem;
+      font-weight: 800;
     }
 
-    .main-chip {
-      width: 29%;
-      height: 32%;
-      left: 35%;
-      top: 33%;
-      color: #c9f5ff;
-      font-weight: 900;
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
-
-    .small-chip {
-      width: 15%;
-      height: 17%;
-      border-color: #428db5;
-    }
-
-    .chip-a {
-      top: 14%;
-      left: 13%;
-    }
-
-    .chip-b {
-      top: 15%;
-      right: 13%;
-    }
-
-    .chip-c {
-      bottom: 14%;
-      left: 15%;
-    }
-
-    .chip-d {
-      bottom: 13%;
-      right: 14%;
-    }
-
-    .chip-e {
-      top: 42%;
-      left: 8%;
-      width: 12%;
-      height: 20%;
-    }
-
-    .chip-f {
-      top: 42%;
-      right: 8%;
-      width: 12%;
-      height: 20%;
-    }
-
-    .board-port {
-      position: absolute;
-      height: 9%;
-      width: 24%;
-      border: 1px solid #73d7ff;
-      border-radius: 4px;
-      background: linear-gradient(#b9d4e2, #344b60, #07131f);
-    }
-
-    .port-top {
-      top: 2%;
-      left: 36%;
-    }
-
-    .port-bottom {
-      bottom: 2%;
-      left: 36%;
-    }
-
-    .circuit {
-      position: absolute;
-      height: 3px;
-      background: #46dcff;
-      box-shadow: 0 0 8px #00bfff;
-      border-radius: 3px;
-    }
-
-    .circuit-a {
-      width: 24%;
-      top: 28%;
-      left: 17%;
-      transform: rotate(28deg);
-    }
-
-    .circuit-b {
-      width: 24%;
-      bottom: 29%;
-      left: 15%;
-      transform: rotate(-25deg);
-    }
-
-    .circuit-c {
-      width: 23%;
-      top: 29%;
-      right: 8%;
-      transform: rotate(-22deg);
-    }
-
-    .circuit-d {
-      width: 23%;
-      bottom: 28%;
-      right: 8%;
-      transform: rotate(23deg);
-    }
-
-    .led {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--orange);
-      box-shadow: 0 0 13px var(--orange);
-      animation: ledPulse 1.4s infinite alternate;
-    }
-
-    .led-a {
-      top: 19%;
-      left: 52%;
-    }
-
-    .led-b {
-      bottom: 20%;
-      left: 48%;
-    }
-
-    .led-c {
-      top: 50%;
-      right: 16%;
-    }
-
-    @keyframes boardFloat {
-      0%, 100% {
-        transform: translateY(0) rotateX(53deg) rotateZ(-28deg);
-      }
-      50% {
-        transform: translateY(-12px) rotateX(49deg) rotateZ(-24deg);
-      }
-    }
-
-    @keyframes ledPulse {
-      from { opacity: .35; }
-      to { opacity: 1; }
-    }
-
-    /* SERVICES */
-
-    section.content-section {
+    section {
       padding: 70px 0;
     }
 
-    .section-heading {
-      font-size: clamp(27px, 4vw, 38px);
-      line-height: 1.25;
-      margin-bottom: 15px;
-    }
-
-    .section-intro {
-      color: var(--muted);
+    .section-head {
       max-width: 750px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    .cards {
+    .section-head h2 {
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .repair-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 19px;
     }
 
-    .card {
-      padding: 23px;
-      background: linear-gradient(145deg, #122a47, #0a192d);
-      border: 1px solid var(--line);
+    .repair-card {
+      padding: 24px;
       border-radius: 15px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, #122b46, #0a192b);
+      transition: .25s ease;
     }
 
-    .card-icon {
-      font-size: 28px;
-      margin-bottom: 10px;
+    .repair-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
     }
 
-    .card h3 {
-      margin-bottom: 9px;
-      font-size: 18px;
+    .repair-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background: rgba(55,182,255,.1);
+      border: 1px solid rgba(55,182,255,.25);
+      font-size: 1.5rem;
     }
 
-    .card p {
+    .repair-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .repair-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: .93rem;
     }
 
-    .about {
+    .work-section {
       background: rgba(255,255,255,.025);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .work-photo {
+      border-radius: 17px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .work-photo img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .work-copy h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin: 12px 0 16px;
+    }
+
+    .work-copy p {
+      color: var(--muted);
     }
 
     .check-list {
@@ -433,8 +342,8 @@
     }
 
     .check-list li {
+      margin: 11px 0;
       color: var(--muted);
-      margin: 10px 0;
     }
 
     .check-list li::before {
@@ -444,102 +353,184 @@
       margin-right: 10px;
     }
 
-    /* CONTACT */
-
-    .contact-box {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 17px;
-      padding: 30px;
-    }
-
-    .contact-box p {
+    .notice {
+      margin-top: 25px;
+      padding: 17px 20px;
+      border-left: 3px solid var(--orange);
+      border-radius: 8px;
+      background: rgba(255,159,67,.07);
       color: var(--muted);
-      margin: 12px 0;
-      overflow-wrap: anywhere;
+      font-size: .92rem;
     }
 
-    .contact-box strong {
-      color: white;
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--panel2);
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--blue), #1685df);
+      color: #061425;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: .93rem;
     }
 
     .faq-item {
-      padding: 20px 0;
+      padding: 19px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .faq-item h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
+      font-size: 1.04rem;
+      margin-bottom: 7px;
     }
 
     .faq-item p {
       color: var(--muted);
     }
 
-    footer {
-      padding: 28px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      border-top: 1px solid var(--line);
+    .contact {
+      background: linear-gradient(180deg, rgba(16,36,61,.7), transparent);
     }
 
-    .whatsapp-float {
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-box {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: linear-gradient(145deg, #122b46, #091727);
+    }
+
+    .contact-box h2 {
+      font-size: 1.65rem;
+      line-height: 1.3;
+      margin: 10px 0 17px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 13px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-box strong {
+      color: var(--white);
+    }
+
+    .contact-box a:not(.btn) {
+      color: var(--blue);
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      background: #040d18;
+      color: var(--muted);
+      font-size: .87rem;
+      text-align: center;
+    }
+
+    .whatsapp {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 200;
+      z-index: 150;
+      padding: 12px 17px;
+      border-radius: 50px;
       background: #25d366;
       color: #062014;
-      padding: 13px 18px;
-      border-radius: 40px;
       font-weight: 900;
       box-shadow: 0 8px 25px rgba(0,0,0,.35);
     }
 
-    @media (max-width: 800px) {
-      .hero-grid {
+    @media (max-width: 850px) {
+      .hero-grid,
+      .work-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 50px 0;
+      .hero-photo img {
+        height: 350px;
       }
 
-      .board-scene {
-        min-height: 300px;
-      }
-
-      .cards {
+      .repair-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
       }
 
       .navbar {
         align-items: flex-start;
         flex-direction: column;
+        padding: 14px 0;
+      }
+
+      nav {
+        gap: 15px;
       }
     }
 
     @media (max-width: 520px) {
-      .cards {
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      .hero-photo {
+        min-height: 280px;
+      }
+
+      .hero-photo img {
+        height: 300px;
+      }
+
+      .repair-grid {
         grid-template-columns: 1fr;
       }
 
-      section.content-section {
-        padding: 48px 0;
+      section {
+        padding: 52px 0;
       }
 
-      .board-scene {
-        min-height: 250px;
-      }
-
-      .main-chip {
-        font-size: 14px;
+      .work-photo img {
+        height: 270px;
       }
 
       .contact-box {
-        padding: 20px;
+        padding: 22px;
+      }
+
+      .actions .btn {
+        flex: 1 1 140px;
       }
     }
 
@@ -547,306 +538,371 @@
       *,
       *::before,
       *::after {
-        animation: none !important;
         scroll-behavior: auto !important;
         transition: none !important;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ComputerStore",
+    "name": "MC TECH Laptop Solutions",
+    "url": "https://maheshmas37.github.io/",
+    "telephone": "+91-9542153367",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No. 2, 7th Main, HAL 3rd Stage, New Thippasandra",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560075",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 </head>
 
 <body>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="../index.html">MC <span>TECH</span></a>
 
-<header>
-  <div class="container navbar">
-    <a class="brand" href="../index.html">
-      MC <span>TECH</span> Laptop Solutions
-    </a>
-
-    <nav aria-label="Main navigation">
-      <a href="../index.html">Home</a>
-      <a href="#services">Repair Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- 3D HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-
-      <div>
-        <div class="eyebrow">LAPTOP SERVICE · BENGALURU</div>
-
-        <h1>
-          Laptop <span>Motherboard Repair</span>
-        </h1>
-
-        <p class="hero-description">
-          Having laptop power, charging or motherboard problems?
-          Contact MC TECH Laptop Solutions in New Thippasandra,
-          Bengaluru, to enquire about motherboard diagnosis and
-          available repair options.
-        </p>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="tel:+919542153367">
-            Call 95421 53367
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://wa.me/919542153367">
-            WhatsApp Us
-          </a>
-        </div>
-      </div>
-
-      <div class="board-scene" aria-label="Animated 3D-style laptop motherboard illustration">
-        <div class="board-glow"></div>
-
-        <div class="motherboard">
-          <div class="board-inner-border"></div>
-
-          <div class="chip main-chip">MC<br>TECH</div>
-
-          <div class="chip small-chip chip-a"></div>
-          <div class="chip small-chip chip-b"></div>
-          <div class="chip small-chip chip-c"></div>
-          <div class="chip small-chip chip-d"></div>
-          <div class="chip small-chip chip-e"></div>
-          <div class="chip small-chip chip-f"></div>
-
-          <div class="board-port port-top"></div>
-          <div class="board-port port-bottom"></div>
-
-          <div class="circuit circuit-a"></div>
-          <div class="circuit circuit-b"></div>
-          <div class="circuit circuit-c"></div>
-          <div class="circuit circuit-d"></div>
-
-          <div class="led led-a"></div>
-          <div class="led led-b"></div>
-          <div class="led led-c"></div>
-        </div>
-      </div>
-
+      <nav aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#services">All Services</a>
+        <a href="#repair-services">Repair Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- SERVICES -->
-  <section class="content-section" id="services">
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Laptop Hardware Service · Bengaluru</div>
+
+          <h1>
+            Laptop Motherboard
+            <span>Repair & Diagnosis</span>
+          </h1>
+
+          <p class="hero-copy">
+            Laptop not powering on? Facing charging issues, unexpected
+            shutdowns or other hardware symptoms? Contact MC TECH Laptop
+            Solutions in New Thippasandra, Bengaluru, to discuss your
+            laptop problem and enquire about repair options.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="tel:+919542153367">
+              ☎ Call Our Shop
+            </a>
+
+            <a class="btn orange"
+               href="https://wa.me/919542153367?text=Hello%20MC%20TECH%2C%20I%20need%20a%20laptop%20motherboard%20repair%20enquiry."
+               target="_blank" rel="noopener noreferrer">
+              WhatsApp Enquiry
+            </a>
+
+            <a class="btn outline" href="../index.html">
+              ← Back to Home
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85"
+            alt="Close-up electronic circuit board and computer hardware"
+            fetchpriority="high"
+            onerror="this.onerror=null;this.src='https://placehold.co/900x650/10243d/37b6ff?text=MC+TECH+Motherboard+Repair';">
+
+          <div class="photo-overlay"></div>
+          <div class="photo-tag">HARDWARE DIAGNOSIS</div>
+
+          <div class="photo-caption">
+            <strong>MC TECH Laptop Solutions</strong>
+            <span>Motherboard Repair Enquiries · New Thippasandra</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="repair-services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Motherboard & Hardware</div>
+          <h2>Hardware Problems We Can Discuss</h2>
+          <p>
+            Different faults can cause similar symptoms. Contact us
+            to enquire about inspection and possible repair options
+            for your laptop model.
+          </p>
+        </div>
+
+        <div class="repair-grid">
+          <article class="repair-card">
+            <div class="repair-icon">⚡</div>
+            <h3>Laptop No Power</h3>
+            <p>
+              Enquire about diagnosis when the laptop does not start
+              or shows no power indication.
+            </p>
+          </article>
+
+          <article class="repair-card">
+            <div class="repair-icon">🔌</div>
+            <h3>Charging Faults</h3>
+            <p>
+              Discuss charging problems, power input symptoms and
+              related hardware checks.
+            </p>
+          </article>
+
+          <article class="repair-card">
+            <div class="repair-icon">🔬</div>
+            <h3>Motherboard Diagnosis</h3>
+            <p>
+              Ask about motherboard inspection and identifying
+              the cause of a hardware problem.
+            </p>
+          </article>
+
+          <article class="repair-card">
+            <div class="repair-icon">🛠️</div>
+            <h3>Component-Level Repair</h3>
+            <p>
+              Enquire whether component-level repair is suitable
+              for your particular motherboard fault.
+            </p>
+          </article>
+
+          <article class="repair-card">
+            <div class="repair-icon">🖥️</div>
+            <h3>No Display Symptoms</h3>
+            <p>
+              Discuss display problems that may involve the
+              motherboard, RAM, display cable or screen.
+            </p>
+          </article>
+
+          <article class="repair-card">
+            <div class="repair-icon">🔄</div>
+            <h3>Random Shutdowns</h3>
+            <p>
+              Enquire about troubleshooting for unexpected
+              restarts, shutdowns and hardware instability.
+            </p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Diagnosis first:</strong> These symptoms do not
+          automatically mean the motherboard is faulty. The cause,
+          repair feasibility and quotation should be confirmed after
+          appropriate inspection.
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="container work-grid">
+        <div class="work-photo">
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=85"
+            alt="Technical electronics and engineering work"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/900x650/10243d/ff9f43?text=Computer+Hardware+Service';">
+        </div>
+
+        <div class="work-copy">
+          <div class="eyebrow">Professional Service Enquiry</div>
+          <h2>Understand the Fault Before Repair</h2>
+
+          <p>
+            A proper diagnosis helps identify whether the issue
+            is related to the motherboard or another laptop component.
+            Share the laptop brand, model and symptoms with our shop.
+          </p>
+
+          <ul class="check-list">
+            <li>Discuss laptop power and charging symptoms</li>
+            <li>Enquire about hardware troubleshooting</li>
+            <li>Ask about repair feasibility and parts</li>
+            <li>Confirm the quotation before authorizing work</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn primary" href="tel:+919542153367">
+              Contact MC TECH
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Simple Process</div>
+          <h2>How to Enquire About a Repair</h2>
+          <p>
+            Contact us first to discuss your laptop and confirm
+            the available service options.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>Share the Symptoms</h3>
+            <p>
+              Tell us the laptop brand, model and problem by phone
+              or WhatsApp.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>Discuss Inspection</h3>
+            <p>
+              Ask about inspection requirements and service
+              availability before visiting.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>Review the Quotation</h3>
+            <p>
+              Discuss the diagnosis, proposed repair and cost
+              before authorizing the work.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Frequently Asked Questions</div>
+          <h2>Motherboard Repair FAQs</h2>
+        </div>
+
+        <div class="faq-item">
+          <h3>Where is MC TECH Laptop Solutions located?</h3>
+          <p>
+            No. 2, 7th Main, HAL 3rd Stage, New Thippasandra,
+            Bengaluru - 560075.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the cost of motherboard repair?</h3>
+          <p>
+            Cost depends on the laptop model, the fault, parts
+            and the repair required. Contact us to enquire about
+            inspection and a quotation.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does a no-power laptop always have a motherboard problem?</h3>
+          <p>
+            No. The charger, battery, RAM, power button and other
+            components may also cause power problems. Diagnosis
+            is required to identify the cause.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I contact MC TECH?</h3>
+          <p>
+            Call 95421 53367 or use the WhatsApp button on this page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-box">
+          <div class="eyebrow">Visit Our Shop</div>
+          <h2>MC TECH Laptop Solutions</h2>
+
+          <p>
+            <strong>Address:</strong><br>
+            No. 2, 7th Main, HAL 3rd Stage,<br>
+            New Thippasandra, Bengaluru - 560075
+          </p>
+
+          <p>
+            <strong>Phone:</strong><br>
+            <a href="tel:+919542153367">95421 53367</a>
+          </p>
+
+          <div class="actions">
+            <a class="btn primary"
+               href="https://www.google.com/maps/search/?api=1&amp;query=MC+TECH+Laptop+Solutions+No+2+7th+Main+HAL+3rd+Stage+New+Thippasandra+Bengaluru+560075"
+               target="_blank" rel="noopener noreferrer">
+              Open Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div class="eyebrow">Need Laptop Support?</div>
+          <h2>Talk to Our Shop</h2>
+
+          <p>
+            Contact MC TECH to discuss the symptoms, check service
+            availability and enquire about the next steps.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="tel:+919542153367">
+              Call 95421 53367
+            </a>
+
+            <a class="btn orange"
+               href="https://wa.me/919542153367?text=Hello%20MC%20TECH%2C%20I%20need%20a%20motherboard%20repair%20enquiry."
+               target="_blank" rel="noopener noreferrer">
+              WhatsApp Us
+            </a>
+
+            <a class="btn outline" href="../index.html#services">
+              All Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-
-      <h2 class="section-heading">Motherboard Repair Enquiries</h2>
-
-      <p class="section-intro">
-        Laptop motherboard faults can have different causes.
-        Contact us with your laptop model and symptoms to discuss
-        inspection and possible repair options.
+      <p>
+        © <span id="year"></span> MC TECH Laptop Solutions.
+        All rights reserved.
       </p>
-
-      <div class="cards">
-
-        <article class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Laptop Not Powering On</h3>
-          <p>
-            Enquire about diagnosis for laptops that do not start
-            or show no power indicators.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🔌</div>
-          <h3>Charging Problems</h3>
-          <p>
-            Ask about charging faults, DC input issues and
-            power-related motherboard symptoms.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🔧</div>
-          <h3>Motherboard Diagnosis</h3>
-          <p>
-            Discuss motherboard inspection and repair possibilities
-            based on the laptop model and fault.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🖥️</div>
-          <h3>No Display Problems</h3>
-          <p>
-            Enquire about laptop display faults that may require
-            motherboard or other component diagnosis.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">💧</div>
-          <h3>Liquid Damage Inspection</h3>
-          <p>
-            Ask about inspection options for laptops exposed
-            to liquid or moisture.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🌡️</div>
-          <h3>Overheating Issues</h3>
-          <p>
-            Discuss overheating, unexpected shutdowns and
-            related hardware troubleshooting.
-          </p>
-        </article>
-
-      </div>
+      <p>New Thippasandra, Bengaluru, Karnataka - 560075</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- ABOUT -->
-  <section class="content-section about" id="about">
-    <div class="container">
+  <a class="whatsapp"
+     href="https://wa.me/919542153367?text=Hello%20MC%20TECH%2C%20I%20need%20a%20motherboard%20repair%20enquiry."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contact MC TECH on WhatsApp">
+    WhatsApp
+  </a>
 
-      <h2 class="section-heading">Why Contact MC TECH?</h2>
-
-      <p class="section-intro">
-        MC TECH Laptop Solutions is located in New Thippasandra,
-        Bengaluru. Contact our shop to discuss your laptop issue
-        and confirm available repair services.
-      </p>
-
-      <ul class="check-list">
-        <li>Local laptop service shop in New Thippasandra</li>
-        <li>Phone and WhatsApp enquiries</li>
-        <li>Diagnosis and repair options discussed before proceeding</li>
-        <li>Service availability and quotation confirmed with the shop</li>
-      </ul>
-
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="content-section" id="faq">
-    <div class="container">
-
-      <h2 class="section-heading">Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <h3>Why is my laptop not powering on?</h3>
-        <p>
-          Several issues can cause this symptom, including the
-          charger, battery, power circuit or motherboard.
-          A proper diagnosis is needed to identify the cause.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Can every motherboard be repaired?</h3>
-        <p>
-          Repair possibilities depend on the fault, component
-          availability and motherboard condition. Contact us
-          to discuss your laptop model.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How do I enquire about repair costs?</h3>
-        <p>
-          Call 95421 53367 or message us on WhatsApp with
-          your laptop model and the symptoms.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Where is MC TECH Laptop Solutions?</h3>
-        <p>
-          No. 2, 7th Main, HAL 3rd Stage,
-          New Thippasandra, Bengaluru - 560075.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="content-section" id="contact">
-    <div class="container">
-
-      <div class="contact-box">
-        <h2 class="section-heading">Contact Our Shop</h2>
-
-        <p>
-          <strong>Business:</strong><br>
-          MC TECH Laptop Solutions
-        </p>
-
-        <p>
-          <strong>Address:</strong><br>
-          No. 2, 7th Main, HAL 3rd Stage,<br>
-          New Thippasandra, Bengaluru - 560075
-        </p>
-
-        <p>
-          <strong>Phone:</strong><br>
-          <a href="tel:+919542153367" style="color:#37b6ff">
-            95421 53367
-          </a>
-        </p>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="tel:+919542153367">
-            Call Now
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://wa.me/919542153367">
-            WhatsApp
-          </a>
-
-          <a class="btn btn-secondary"
-             href="https://www.google.com/maps/search/?api=1&amp;query=MC+TECH+Laptop+Solutions+No+2+7th+Main+HAL+3rd+Stage+New+Thippasandra+Bengaluru+560075"
-             target="_blank" rel="noopener noreferrer">
-            Google Maps
-          </a>
-
-          <a class="btn btn-secondary" href="../index.html">
-            Back to Home
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>
-      © <span id="year"></span> MC TECH Laptop Solutions.
-      All rights reserved.
-    </p>
-    <p>New Thippasandra, Bengaluru, Karnataka - 560075</p>
-  </div>
-</footer>
-
-<a class="whatsapp-float"
-   href="https://wa.me/919542153367"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Contact MC TECH on WhatsApp">
-  WhatsApp
-</a>
-
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>

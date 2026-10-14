@@ -1,1 +1,361 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f9ff">
+<meta name="description" content="Windows Installation Service in Bengaluru by MC TECH Laptop Solutions.">
+<title>Windows Installation | MC TECH Laptop Solutions</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1265e8;
+  --dark:#10264a;
+  --light:#eef5ff;
+}
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f9ff;
+  color:#182943;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 7%;
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid #e0eaff;
+}
+.logo{
+  color:var(--blue);
+  font-weight:800;
+  font-size:21px;
+  text-decoration:none;
+}
+.home{
+  color:var(--dark);
+  text-decoration:none;
+  font-weight:600;
+}
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 7%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:45px;
+}
+.tag{
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:30px;
+  background:#e2edff;
+  color:#0756cb;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+h1{
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.12;
+  color:var(--dark);
+  margin:20px 0;
+}
+h1 span{color:var(--blue)}
+.intro{
+  color:#586983;
+  font-size:17px;
+  max-width:500px;
+}
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:28px;
+}
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:10px;
+  background:var(--blue);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 8px 20px #1265e833;
+  transition:.25s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px #1265e84a}
+.btn.alt{background:white;color:var(--blue);border:1px solid #cfe0ff}
+.visual{
+  min-height:370px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  perspective:1000px;
+  position:relative;
+}
+.glow{
+  position:absolute;
+  width:300px;height:260px;
+  border-radius:50%;
+  background:#a9ceff;
+  filter:blur(65px);
+  opacity:.65;
+  animation:pulse 4s infinite alternate;
+}
+.laptop{
+  position:relative;
+  width:min(100%,430px);
+  transform:rotateY(-13deg) rotateX(5deg);
+  animation:float 5s ease-in-out infinite;
+  transform-style:preserve-3d;
+  z-index:1;
+}
+.screen{
+  background:linear-gradient(145deg,#142d58,#0878f9);
+  border:8px solid #26364e;
+  border-bottom-width:12px;
+  border-radius:16px 16px 7px 7px;
+  aspect-ratio:1.48;
+  padding:20px;
+  box-shadow:0 20px 45px #153c7933,inset 0 0 0 1px #ffffff44;
+  position:relative;
+  overflow:hidden;
+}
+.screen:before{
+  content:"";
+  position:absolute;
+  width:200px;height:200px;
+  border-radius:50%;
+  background:#4ba8ff;
+  filter:blur(50px);
+  right:-60px;bottom:-90px;
+}
+.screen-top{
+  color:#dceaff;
+  font-size:11px;
+  position:relative;
+}
+.window-symbol{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-60%);
+  width:100px;height:78px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+  filter:drop-shadow(0 0 16px #82c8ff);
+}
+.window-symbol i{
+  display:block;
+  background:linear-gradient(135deg,#fff,#86c9ff);
+  border-radius:2px;
+}
+.progress-area{
+  position:absolute;
+  left:18px;right:18px;bottom:17px;
+  color:white;font-size:10px;
+}
+.progress-track{
+  height:5px;
+  margin-top:7px;
+  background:#ffffff55;
+  border-radius:10px;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;width:0;
+  background:#fff;
+  border-radius:10px;
+  animation:load 5s ease-in-out infinite alternate;
+}
+.base{
+  height:16px;
+  margin:0 -23px;
+  background:linear-gradient(#d9e5f5,#8398b5 50%,#e8f0fb);
+  border-radius:2px 2px 22px 22px;
+  transform:rotateX(30deg);
+  box-shadow:0 17px 24px #183b7025;
+}
+.base:after{
+  content:"";
+  display:block;
+  width:90px;height:5px;
+  background:#8197b5;
+  border-radius:0 0 9px 9px;
+  margin:auto;
+}
+.float-card{
+  position:absolute;
+  z-index:2;
+  background:#fff;
+  border:1px solid #e0eaff;
+  box-shadow:0 15px 35px #183b7020;
+  border-radius:13px;
+  padding:13px 16px;
+  color:#244166;
+  font-size:13px;
+  font-weight:700;
+  animation:float 4s ease-in-out infinite;
+}
+.float-card.one{top:35px;right:0}
+.float-card.two{bottom:38px;left:0;animation-delay:1s}
+.float-card span{color:#1382ef;font-size:20px;margin-right:7px}
+@keyframes float{
+  0%,100%{transform:translateY(0) rotateY(-13deg) rotateX(5deg)}
+  50%{transform:translateY(-12px) rotateY(-8deg) rotateX(2deg)}
+}
+@keyframes pulse{from{opacity:.4;transform:scale(.9)}to{opacity:.8;transform:scale(1.12)}}
+@keyframes load{from{width:15%}to{width:95%}}
+.section{
+  padding:45px 7%;
+  background:#fff;
+  border-top:1px solid #e5edfa;
+}
+.inner{max-width:1050px;margin:auto}
+.section h2{text-align:center;color:var(--dark);font-size:30px;margin-bottom:10px}
+.sub{text-align:center;color:#687990;margin-bottom:30px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.card{
+  background:#f8fbff;
+  border:1px solid #e1ebfa;
+  border-radius:15px;
+  padding:24px;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #1b4e9020}
+.icon{font-size:28px;margin-bottom:12px}
+.card h3{color:#163d75;margin-bottom:7px;font-size:17px}
+.card p{color:#63738a;font-size:14px}
+.contact{
+  background:linear-gradient(120deg,#eaf3ff,#fff);
+  padding:40px 7%;
+  text-align:center;
+}
+.contact h2{color:var(--dark);margin-bottom:10px}
+.contact p{color:#5c6f89;margin:8px 0}
+footer{text-align:center;padding:22px;background:#fff;color:#687990;font-size:13px}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:45px;gap:15px}
+  .visual{min-height:330px;margin-top:10px}
+  .grid{grid-template-columns:1fr}
+  header{padding:17px 5%}
+  .float-card.one{right:0}
+  .float-card.two{left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <a class="logo" href="../index.html">MC TECH Laptop Solutions</a>
+  <a class="home" href="../index.html">← Home</a>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="tag">LAPTOP SOFTWARE SERVICES</span>
+    <h1>Windows <span>Installation</span> & Setup</h1>
+    <p class="intro">
+      Professional Windows installation and setup support for laptops
+      and computers. Get help with drivers, system configuration,
+      updates and software troubleshooting.
+    </p>
+    <div class="actions">
+      <a class="btn" href="tel:+919542153367">☎ Call for Service</a>
+      <a class="btn alt"
+         href="https://wa.me/919542153367?text=Hello%2C%20I%20need%20Windows%20installation%20service."
+         target="_blank" rel="noopener">WhatsApp Enquiry</a>
+    </div>
+  </div>
+
+  <div class="visual" aria-label="Animated 3D laptop showing Windows installation">
+    <div class="glow"></div>
+    <div class="float-card one"><span>✓</span> Driver Setup</div>
+    <div class="float-card two"><span>⚙</span> System Setup</div>
+    <div class="laptop">
+      <div class="screen">
+        <div class="screen-top">MC TECH · SYSTEM SETUP</div>
+        <div class="window-symbol" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <div class="progress-area">
+          <div>Installing system components...</div>
+          <div class="progress-track"><div class="progress-fill"></div></div>
+        </div>
+      </div>
+      <div class="base"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <h2>Windows Installation Services</h2>
+    <p class="sub">Reliable setup and software support for your computer.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="icon">💻</div>
+        <h3>Windows Installation</h3>
+        <p>Windows installation or reinstallation based on device compatibility.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚙️</div>
+        <h3>Driver Installation</h3>
+        <p>Help installing compatible audio, graphics, Wi-Fi and other drivers.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🛠️</div>
+        <h3>System Troubleshooting</h3>
+        <p>Support for startup problems, updates and common software issues.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔄</div>
+        <h3>Windows Updates</h3>
+        <p>Assistance with supported updates and system configuration.</p>
+      </article>
+      <article class="card">
+        <div class="icon">💾</div>
+        <h3>Data Backup Guidance</h3>
+        <p>Discuss important file backup before reinstalling Windows.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔐</div>
+        <h3>Activation Guidance</h3>
+        <p>Help with genuine Windows licensing and activation options.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Need Windows Installation?</h2>
+  <p><strong>MC TECH Laptop Solutions</strong></p>
+  <p>No. 2, 7th Main, HAL 3rd Stage, New Thippasandra,<br>
+     Bengaluru - 560075</p>
+  <p>Phone: 95421 53367</p>
+  <div class="actions" style="justify-content:center">
+    <a class="btn" href="tel:+919542153367">Call Now</a>
+    <a class="btn alt"
+       href="https://wa.me/919542153367?text=Hello%2C%20I%20need%20laptop%20service."
+       target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 MC TECH Laptop Solutions. All rights reserved.</footer>
+</body>
+

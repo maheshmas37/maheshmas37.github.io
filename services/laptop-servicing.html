@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5f9ff">
+<meta name="description" content="Laptop servicing and repair support by MC TECH Laptop Solutions, New Thippasandra, Bengaluru.">
+<title>Laptop Servicing | MC TECH Laptop Solutions</title>
 
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#1265e8;--dark:#10264a}
+body{font-family:Arial,sans-serif;background:#f5f9ff;color:#182943;line-height:1.6}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#fff;border-bottom:1px solid #e1eaff}
+.logo{color:var(--blue);font-weight:800;font-size:21px;text-decoration:none}
+.home{color:#233957;text-decoration:none;font-weight:700}
+.hero{max-width:1150px;margin:auto;padding:65px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:#e1edff;color:#1258c3;padding:7px 13px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(36px,5vw,56px);line-height:1.12;color:var(--dark);margin:20px 0}
+h1 span{color:var(--blue)}
+.intro{font-size:17px;color:#60718a}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{display:inline-block;padding:12px 19px;border-radius:9px;background:var(--blue);color:white;text-decoration:none;font-weight:700;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px #1265e833}
+.btn.alt{background:white;color:var(--blue);border:1px solid #cfe0ff}
+.visual{min-height:340px;display:flex;align-items:center;justify-content:center;position:relative;perspective:1000px}
+.glow{position:absolute;width:270px;height:240px;background:#a8ccff;border-radius:50%;filter:blur(65px);opacity:.7;animation:pulse 4s infinite alternate}
+.laptop{width:min(100%,420px);position:relative;z-index:1;animation:float 5s ease-in-out infinite;transform-style:preserve-3d}
+.screen{position:relative;aspect-ratio:1.5;border:8px solid #26364e;border-bottom-width:12px;border-radius:16px 16px 6px 6px;background:linear-gradient(145deg,#10295a,#0878f9);box-shadow:0 25px 45px #183b7033;overflow:hidden;padding:18px}
+.screen:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#58aaff;filter:blur(50px);right:-45px;bottom:-60px}
+.screen-label{position:relative;color:#e8f2ff;font-size:11px;letter-spacing:1px}
+.gear{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);font-size:76px;color:#fff;text-shadow:0 0 24px #9cd7ff;animation:spin 12s linear infinite}
+.screen-bottom{position:absolute;bottom:15px;left:16px;right:16px;color:white;font-size:10px}
+.track{height:5px;background:#ffffff55;border-radius:10px;margin-top:7px;overflow:hidden}
+.fill{height:100%;background:#fff;width:0;animation:load 5s ease-in-out infinite alternate}
+.base{height:15px;margin:0 -22px;background:linear-gradient(#e1eafa,#8499b5,#d9e5f5);border-radius:2px 2px 20px 20px;transform:rotateX(30deg);box-shadow:0 17px 25px #173e7025}
+.base:after{content:"";display:block;width:85px;height:5px;background:#8196b3;margin:auto;border-radius:0 0 8px 8px}
+.float-card{position:absolute;z-index:2;background:#fff;border:1px solid #e0eaff;box-shadow:0 12px 30px #183b7020;border-radius:12px;padding:12px 15px;font-size:13px;font-weight:700;color:#244166;animation:bob 4s ease-in-out infinite}
+.float-card.one{top:25px;right:0}
+.float-card.two{bottom:30px;left:0;animation-delay:1s}
+.float-card span{color:var(--blue);margin-right:6px;font-size:18px}
+@keyframes float{0%,100%{transform:rotateY(-12deg) translateY(0)}50%{transform:rotateY(-5deg) translateY(-10px)}}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes pulse{from{opacity:.4;scale:.9}to{opacity:.8;scale:1.1}}
+@keyframes spin{to{rotate:360deg}}
+@keyframes load{from{width:15%}to{width:95%}}
+.section{padding:50px 7%;background:#fff;border-top:1px solid #e5edfa}
+.inner{max-width:1050px;margin:auto}
+.section h2{text-align:center;color:var(--dark);font-size:30px;margin-bottom:8px}
+.sub{text-align:center;color:#687990;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#f9fbff;border:1px solid #e0eafa;border-radius:15px;padding:23px;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #1b4e9018}
+.icon{font-size:30px;margin-bottom:10px}
+.card h3{color:#163d75;margin-bottom:7px;font-size:17px}
+.card p{color:#63738a;font-size:14px}
+.contact{padding:42px 7%;text-align:center;background:linear-gradient(120deg,#eaf3ff,#fff)}
+.contact h2{color:var(--dark);margin-bottom:10px}
+.contact p{margin:7px 0;color:#5c6f89}
+footer{text-align:center;padding:22px;background:#fff;color:#687990;font-size:13px}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding:42px 6%;gap:15px}
+ .visual{min-height:310px;margin-top:10px}
+ .grid{grid-template-columns:1fr}
+ header{padding:16px 5%}
+ .section{padding:40px 6%}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+<header>
+  <a class="logo" href="../index.html">MC TECH Laptop Solutions</a>
+  <a class="home" href="../index.html">← Home</a>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="tag">LAPTOP REPAIR & MAINTENANCE</span>
+    <h1>Professional <span>Laptop Servicing</span></h1>
+    <p class="intro">
+      Laptop cleaning, overheating checks, performance diagnosis
+      and general repair support for laptops and computers.
+      Contact us to discuss your laptop issue and service options.
+    </p>
+    <div class="actions">
+      <a class="btn" href="tel:+919542153367">☎ Call for Service</a>
+      <a class="btn alt" href="https://wa.me/919542153367?text=Hello%2C%20I%20need%20laptop%20servicing." target="_blank" rel="noopener">WhatsApp Enquiry</a>
+    </div>
+  </div>
+
+  <div class="visual" aria-label="Animated 3D laptop illustration">
+    <div class="glow"></div>
+    <div class="float-card one"><span>✓</span> Laptop Check</div>
+    <div class="float-card two"><span>⚙</span> Maintenance</div>
+    <div class="laptop">
+      <div class="screen">
+        <div class="screen-label">MC TECH · LAPTOP SERVICE</div>
+        <div class="gear" aria-hidden="true">⚙</div>
+        <div class="screen-bottom">
+          <div>System diagnostics</div>
+          <div class="track"><div class="fill"></div></div>
+        </div>
+      </div>
+      <div class="base"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="inner">
+    <h2>Our Laptop Servicing</h2>
+    <p class="sub">Service options based on your laptop's condition and requirements.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🧹</div>
+        <h3>Cleaning & Maintenance</h3>
+        <p>Internal cleaning and maintenance checks where suitable.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🌡️</div>
+        <h3>Overheating Checks</h3>
+        <p>Check fan operation, airflow and possible cooling issues.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔍</div>
+        <h3>Hardware Diagnosis</h3>
+        <p>Help identifying common laptop hardware problems.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🐢</div>
+        <h3>Performance Checks</h3>
+        <p>Investigate slow startup and common performance issues.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔋</div>
+        <h3>Battery & Power Issues</h3>
+        <p>Initial checks for charging, battery and power-related problems.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🛠️</div>
+        <h3>Repair Support</h3>
+        <p>Discuss repair options after the laptop has been inspected.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Book a Laptop Service Enquiry</h2>
+  <p><strong>MC TECH Laptop Solutions</strong></p>
+  <p>No. 2, 7th Main, HAL 3rd Stage, New Thippasandra,<br>
+  Bengaluru - 560075</p>
+  <p>Phone: 95421 53367</p>
+  <div class="actions" style="justify-content:center">
+    <a class="btn" href="tel:+919542153367">Call Now</a>
+    <a class="btn alt" href="https://wa.me/919542153367?text=Hello%2C%20I%20need%20laptop%20servicing." target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 MC TECH Laptop Solutions. All rights reserved.</footer>
+</body>
